@@ -4,7 +4,7 @@ pipeline {
         // Docker Hub credentials
         PAT_CREDENTIALS_ID = "PAT_Jenkins"
         DOCKER_CREDENTIALS_ID = "docker-hub" // Set Jenkins Docker Hub credentials ID here
-        DOCKER_IMAGE = "lemichael52/hcmsiu:v1" // Change to your desired image name and tag
+        DOCKER_IMAGE = "dngoctien04/hcmsiu:v1" // Change to your desired image name and tag
         CONTAINER_NAME = "hcmsiu" // Replace with your Docker container name
     }
     
@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Pull the code from a private GitHub repository
-                git url: 'https://github.com/ltmichael52/HCMSIU.git', credentialsId: "${PAT_CREDENTIALS_ID}"
+                git url: 'https://github.com/ng-tin08/HCMSIU.git', credentialsId: "${PAT_CREDENTIALS_ID}"
                 echo "Update git repo complete"
             }
         }
